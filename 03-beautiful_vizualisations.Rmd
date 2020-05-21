@@ -1,0 +1,10 @@
+# Beautiful Visualizations in R
+
+Basic guide to ggplot for health data:
+1) Line charts (Covid)
+2) Scatter plots
+3) Heatplots/Corrplots
+4) Mapping
+
+
+

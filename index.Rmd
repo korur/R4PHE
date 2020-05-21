@@ -1,6 +1,6 @@
 --- 
-title: "A Minimal Book Example"
-author: "Yihui Xie"
+title: "Data Science for Public Health Economic Evaluation"
+author: "Robert Smith"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
@@ -9,28 +9,88 @@ bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
 github-repo: rstudio/bookdown-demo
-description: "This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook."
+description: "This is a teaching tool in progress"
 ---
 
-# Prerequisites
+# Background
 
-This is a _sample_ book written in **Markdown**. You can use anything that Pandoc's Markdown supports, e.g., a math equation $a^2 + b^2 = c^2$.
+## Who are we:
 
-The **bookdown** package can be installed from CRAN or Github:
+All of the tutors on the course are PhD candidates in the Wellcome Trust Doctoral Training Centre for Public Health Economics and Decision Science at the School of Health and Related Research at the University of Sheffield.
 
-```{r eval=FALSE}
-install.packages("bookdown")
-# or the development version
-# devtools::install_github("rstudio/bookdown")
-```
+*[Robert Smith](https://www.linkedin.com/in/robert-smith-53b28438/)* joined ScHARR in 2016. His research focuses on the methods used to estimate the costs and benefits of public health interventions, with a specific interest in microsimulation modelling (done in R). He has become increasingly intersted in the use of R-Markdown and R-Shiny to make research more transparent and to aid decision makers. While doing his PhD, Robert has been involved in projects with the WHO and Parkrun.
 
-Remember each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading `#`.
+*[Paul Schneider](https://www.sheffield.ac.uk/scharr/staff-pgrs/studentprofiles/paulschneider)* joined ScHARR in 2018. He is working on conceptual and methodological problems in valuing health outcomes in economic evaluations. A medical doctor and epidemiologist by training, he has used R in various research projects, ranging from the modeling costs of breast cancer, and value of information analyses, to the monitoring of influenza in real-time using online data. He is a keen advocate of open science practices.
 
-To compile this example to PDF, you need XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): <https://yihui.name/tinytex/>.
+## Our series of Short Courses in R.
 
-```{r include=FALSE}
-# automatically create a bib database for R packages
-knitr::write_bib(c(
-  .packages(), 'bookdown', 'knitr', 'rmarkdown'
-), 'packages.bib')
-```
+Below is a list of our planned short courses in R. 
+
+### Course 1 - Intro to R
+By the end of the one day short course, the attendee should be able to:
+
+* Install and navigate R Studio. 
+* Set the working directory.
+* Understand the types of objects and basic operations in R.
+* Read in data from csv and excel files.
+* Summarise data. 
+* Know where to find further information.
+
+### Course 2 - Intermediate  R
+By the end of the half day short course, the attendee should be able to:
+
+* Find & download appropriate packages for different tasks.
+* Use tidyverse functions to manipulate data. 
+* Use the dplyr package to mutate, select, filter, summarise and arrange data.
+* Analyse datasets by groups.
+* Use tidyr to restructure data.
+* Know where to find further information.
+
+
+### Course 3 - Beautiful Visualisations
+By the end of the half day short course, the attendee should be able to:
+
+* Know the benefits of ggplot over base R.
+* Structure data efficiently to enable the use of ggplot.
+* Understand the basic types of plots and when to use them.
+* Create beautiful visualisations using ggplot2.
+* Use geographical data to produce choropleth maps.  
+
+
+### Course 4 - R for Health Economics
+By the end of the one day short course, the attendee should also be able to:
+
+* Understand the strengths and limitations of R for health economic modelling.
+* Manage different objects and parameters in R.
+* Use loops, custom functions and the apply family.
+* Create a markov model from scratch given known parameters.
+* Create a microsimulation model to incorporate hetrogeneity between groups.
+* Understand the importance of tranparency of coding. In particular commenting.
+
+
+### Course 5 - R Shiny for decision modelling
+By the end of the half day short course, the attendee should be able to:
+
+* Understand the benefits and limitations of R-Shiny.
+* Have a basic understanding of the principles behind R-Shiny.
+* Create an R-Shiny application from scratch.
+* Integrate beautiful plots into R-Shiny.
+* Develop a user interface for an existing markov model in R-Shiny.
+* Know where to find further information.
+
+### Course 6 - Collaboration in R
+By the end of the half day short course, the attendee should be able to:
+
+* Understand the strengths and limitations of R-Markdown.
+* Create replicatable HTML, Word and PDF documents using R-Markdown.
+* Include chunks of code, graphs, references and biblographies, links to websites and pictures within documents.
+* Collaborate on a project in GitHub
+* Replicate analysis for new or updated datasets from previous work made publicly available on GitHub.
+
+
+## Aim of the series of courses
+
+This series of short courses are designed to equip the participant with a basic set of tools to undertake research using R. The aim is to create a strong foundation on which participants can build skills and knowledge specific to their research and consultancy objectives. The course makes use of the authors' experiences (many of which were frustrating) of working with R for data-science and statistical analysis. However there are many other resources available, and we would particularly recommend the freely available content at *[R for Data Science](https://r4ds.had.co.nz/)* as a good place to recap the materials taught in this course. The hard copy of Hadley Wickham and Garrett Grolemund's book of the same name (and content) is available at *[Amazon.com](https://r4ds.had.co.nz/)*. Alternatively, a user guide is available on the CRAN R-Project website [here](https://cran.r-project.org/doc/manuals/r-release/R-intro.html), although the author finds this less easy to follow than Hadley Wickham's book described above. Further details of where to go to answer more specific questions are provided throughout the course.
+
+Requirements: It is assumed that all participants on the course have their own laptop, and have previously used software such as Excel or SPSS. Some basic understanding of statistics and mathematics is required (e.g. mean, median, minimum, maximum).
+

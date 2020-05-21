@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 Background | Data Science for Public Health Economic Evaluation</title>
+  <meta name="description" content="This is a teaching tool in progress" />
+  <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 Background | Data Science for Public Health Economic Evaluation" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is a teaching tool in progress" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 Background | Data Science for Public Health Economic Evaluation" />
+  
+  <meta name="twitter:description" content="This is a teaching tool in progress" />
+  
+
+<meta name="author" content="Robert Smith" />
+
+
+<meta name="date" content="2020-05-21" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="intro.html"/>
+<link rel="next" href="course-1-introduction-to-r.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Course content:</a></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction to R</a></li>
+<li class="chapter" data-level="3" data-path="background.html"><a href="background.html"><i class="fa fa-check"></i><b>3</b> Background</a><ul>
+<li class="chapter" data-level="3.1" data-path="background.html"><a href="background.html#who-are-we"><i class="fa fa-check"></i><b>3.1</b> Who are we:</a></li>
+<li class="chapter" data-level="3.2" data-path="background.html"><a href="background.html#our-series-of-short-courses-in-r."><i class="fa fa-check"></i><b>3.2</b> Our series of Short Courses in R.</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="background.html"><a href="background.html#course-1---intro-to-r"><i class="fa fa-check"></i><b>3.2.1</b> Course 1 - Intro to R</a></li>
+<li class="chapter" data-level="3.2.2" data-path="background.html"><a href="background.html#course-2---intermediate-r"><i class="fa fa-check"></i><b>3.2.2</b> Course 2 - Intermediate R</a></li>
+<li class="chapter" data-level="3.2.3" data-path="background.html"><a href="background.html#course-3---beautiful-visualisations"><i class="fa fa-check"></i><b>3.2.3</b> Course 3 - Beautiful Visualisations</a></li>
+<li class="chapter" data-level="3.2.4" data-path="background.html"><a href="background.html#course-4---r-for-health-economics"><i class="fa fa-check"></i><b>3.2.4</b> Course 4 - R for Health Economics</a></li>
+<li class="chapter" data-level="3.2.5" data-path="background.html"><a href="background.html#course-5---r-shiny-for-decision-modelling"><i class="fa fa-check"></i><b>3.2.5</b> Course 5 - R Shiny for decision modelling</a></li>
+<li class="chapter" data-level="3.2.6" data-path="background.html"><a href="background.html#course-6---collaboration-in-r"><i class="fa fa-check"></i><b>3.2.6</b> Course 6 - Collaboration in R</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="course-1-introduction-to-r.html"><a href="course-1-introduction-to-r.html"><i class="fa fa-check"></i><b>4</b> Course 1 - Introduction to R</a><ul>
+<li class="chapter" data-level="4.1" data-path="course-1-introduction-to-r.html"><a href="course-1-introduction-to-r.html#install-and-navigate-r-studio."><i class="fa fa-check"></i><b>4.1</b> Install and navigate R Studio.</a></li>
+<li class="chapter" data-level="4.2" data-path="course-1-introduction-to-r.html"><a href="course-1-introduction-to-r.html#basics"><i class="fa fa-check"></i><b>4.2</b> Basics</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="course-1-introduction-to-r.html"><a href="course-1-introduction-to-r.html#basic-operations"><i class="fa fa-check"></i><b>4.2.1</b> Basic operations</a></li>
+<li class="chapter" data-level="4.2.2" data-path="course-1-introduction-to-r.html"><a href="course-1-introduction-to-r.html#objects"><i class="fa fa-check"></i><b>4.2.2</b> Objects</a></li>
+<li class="chapter" data-level="4.2.3" data-path="course-1-introduction-to-r.html"><a href="course-1-introduction-to-r.html#overwriting-manipulating-objects"><i class="fa fa-check"></i><b>4.2.3</b> Overwriting / Manipulating Objects</a></li>
+<li class="chapter" data-level="4.2.4" data-path="course-1-introduction-to-r.html"><a href="course-1-introduction-to-r.html#seeing-our-objects"><i class="fa fa-check"></i><b>4.2.4</b> Seeing our Objects</a></li>
+<li class="chapter" data-level="4.2.5" data-path="course-1-introduction-to-r.html"><a href="course-1-introduction-to-r.html#removing-objects"><i class="fa fa-check"></i><b>4.2.5</b> Removing Objects</a></li>
+<li class="chapter" data-level="4.2.6" data-path="course-1-introduction-to-r.html"><a href="course-1-introduction-to-r.html#evaluations"><i class="fa fa-check"></i><b>4.2.6</b> Evaluations</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="course-1-introduction-to-r.html"><a href="course-1-introduction-to-r.html#object-classes-and-types"><i class="fa fa-check"></i><b>4.3</b> Object classes and types</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="course-1-introduction-to-r.html"><a href="course-1-introduction-to-r.html#object-classes"><i class="fa fa-check"></i><b>4.3.1</b> Object Classes</a></li>
+<li class="chapter" data-level="4.3.2" data-path="course-1-introduction-to-r.html"><a href="course-1-introduction-to-r.html#operations-on-different-data-structures"><i class="fa fa-check"></i><b>4.3.2</b> Operations on different data structures</a></li>
+<li class="chapter" data-level="4.3.3" data-path="course-1-introduction-to-r.html"><a href="course-1-introduction-to-r.html#basic-object-types"><i class="fa fa-check"></i><b>4.3.3</b> Basic object Types</a></li>
+<li class="chapter" data-level="4.3.4" data-path="course-1-introduction-to-r.html"><a href="course-1-introduction-to-r.html#subsetting"><i class="fa fa-check"></i><b>4.3.4</b> Subsetting</a></li>
+<li class="chapter" data-level="4.3.5" data-path="course-1-introduction-to-r.html"><a href="course-1-introduction-to-r.html#independent-exercises"><i class="fa fa-check"></i><b>4.3.5</b> Independent Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="course-1-introduction-to-r.html"><a href="course-1-introduction-to-r.html#working-with-data-in-r"><i class="fa fa-check"></i><b>4.4</b> Working with Data in R</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="course-1-introduction-to-r.html"><a href="course-1-introduction-to-r.html#keeping-track-of-progress-in-r"><i class="fa fa-check"></i><b>4.4.1</b> Keeping Track of progress in R</a></li>
+<li class="chapter" data-level="4.4.2" data-path="course-1-introduction-to-r.html"><a href="course-1-introduction-to-r.html#importing-data"><i class="fa fa-check"></i><b>4.4.2</b> Importing Data</a></li>
+<li class="chapter" data-level="4.4.3" data-path="course-1-introduction-to-r.html"><a href="course-1-introduction-to-r.html#summarising-data"><i class="fa fa-check"></i><b>4.4.3</b> Summarising Data</a></li>
+<li class="chapter" data-level="4.4.4" data-path="course-1-introduction-to-r.html"><a href="course-1-introduction-to-r.html#plotting-data"><i class="fa fa-check"></i><b>4.4.4</b> Plotting Data</a></li>
+<li class="chapter" data-level="4.4.5" data-path="course-1-introduction-to-r.html"><a href="course-1-introduction-to-r.html#troubleshooting-in-r"><i class="fa fa-check"></i><b>4.4.5</b> Troubleshooting in R</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="course-1-introduction-to-r.html"><a href="course-1-introduction-to-r.html#further-learning"><i class="fa fa-check"></i><b>4.5</b> Further learning</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="literature.html"><a href="literature.html"><i class="fa fa-check"></i><b>5</b> Literature</a></li>
+<li class="chapter" data-level="6" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>6</b> Methods</a></li>
+<li class="chapter" data-level="7" data-path="applications.html"><a href="applications.html"><i class="fa fa-check"></i><b>7</b> Applications</a><ul>
+<li class="chapter" data-level="7.1" data-path="applications.html"><a href="applications.html#example-one"><i class="fa fa-check"></i><b>7.1</b> Example one</a></li>
+<li class="chapter" data-level="7.2" data-path="applications.html"><a href="applications.html#example-two"><i class="fa fa-check"></i><b>7.2</b> Example two</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="final-words.html"><a href="final-words.html"><i class="fa fa-check"></i><b>8</b> Final Words</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Science for Public Health Economic Evaluation</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="background" class="section level1">
+<h1><span class="header-section-number">Chapter 3</span> Background</h1>
+<p>This series of short courses are designed to equip the participant with a basic set of tools to undertake research using R. The aim is to create a strong foundation on which participants can build skills and knowledge specific to their research and consultancy objectives. The course makes use of the authors’ experiences (many of which were frustrating) of working with R for data-science and statistical analysis. However there are many other resources available, and we would particularly recommend the freely available content at <em><a href="https://r4ds.had.co.nz/">R for Data Science</a></em> as a good place to recap the materials taught in this course. The hard copy of Hadley Wickham and Garrett Grolemund’s book of the same name (and content) is available at <em><a href="https://r4ds.had.co.nz/">Amazon.com</a></em>. Alternatively, a user guide is available on the CRAN R-Project website <a href="https://cran.r-project.org/doc/manuals/r-release/R-intro.html">here</a>, although the author finds this less easy to follow than Hadley Wickham’s book described above. Further details of where to go to answer more specific questions are provided throughout the course.</p>
+<p>Requirements: It is assumed that all participants on the course have their own laptop, and have previously used software such as Excel or SPSS. Some basic understanding of statistics and mathematics is required (e.g. mean, median, minimum, maximum).</p>
+<div id="who-are-we" class="section level2">
+<h2><span class="header-section-number">3.1</span> Who are we:</h2>
+<p>All of the tutors on the course are PhD candidates in the Wellcome Trust Doctoral Training Centre for Public Health Economics and Decision Science at the School of Health and Related Research at the University of Sheffield.</p>
+<p><em><a href="https://www.linkedin.com/in/robert-smith-53b28438/">Robert Smith</a></em> joined ScHARR in 2016. His research focuses on the methods used to estimate the costs and benefits of public health interventions, with a specific interest in microsimulation modelling (done in R). He has become increasingly intersted in the use of R-Markdown and R-Shiny to make research more transparent and to aid decision makers. While doing his PhD, Robert has been involved in projects with the WHO and Parkrun.</p>
+<p><em><a href="https://www.sheffield.ac.uk/scharr/staff-pgrs/studentprofiles/paulschneider">Paul Schneider</a></em> joined ScHARR in 2018. He is working on conceptual and methodological problems in valuing health outcomes in economic evaluations. A medical doctor and epidemiologist by training, he has used R in various research projects, ranging from the modeling costs of breast cancer, and value of information analyses, to the monitoring of influenza in real-time using online data. He is a keen advocate of open science practices.</p>
+<p><em><a href="https://www.linkedin.com/in/sarah-elizabeth-bates-647ab9145/">Sarah Bates</a></em> joined ScHARR in 2016. Sarah is examining the role of psychological factors in weight trajectories during and after a weight management intervention, and how these factors can be used to inform weight trajectories in a health economic model of obesity. Sarah is using microsimulation modelling in R throughout her PhD.</p>
+<p><em><a href="https://www.linkedin.com/in/tom-bayley-31ba8570/">Thomas Bayley</a></em> joined ScHARR in 2016. His research focuses on modelling the complex relationships that exist between Obesity, Depression and Socioeconomic status. He is interested in how data analysis and simulation modelling can be used to understand causal mechanisms in complex systems.</p>
+<p><em><a href="https://www.linkedin.com/in/naomi-gibbs-27810248/">Naomi Gibbs</a></em> joined ScHARR in 2017. Naomi is working on a health economic model to inform alcohol pricing policy options in South Africa. She is working closely with local stakeholders to conceptualise and validate the model. Naomi will be using R to create and communicate her modelling work and hopes to enable greater engagement from policy makers through interactive dashboards.</p>
+<p><em><a href="https://www.sheffield.ac.uk/scharr/staff-pgrs/studentprofiles/amychang">Amy Chang</a></em> joined ScHARR in 2018. Prior to joining ScHARR she worked at the Centre for Drug Evaluation (HTA body) in Taiwan. Her research interests lie in health economic modelling with an emphasis on evaluating health interventions and better understanding the effect of intervention timing using evidence generated from real-world data. Amy has previously used R for, among other things, survival analysis and large scale data scraping.</p>
+<div style="page-break-after: always;"></div>
+</div>
+<div id="our-series-of-short-courses-in-r." class="section level2">
+<h2><span class="header-section-number">3.2</span> Our series of Short Courses in R.</h2>
+<p>Below is a list of our planned short courses in R.</p>
+<div id="course-1---intro-to-r" class="section level3">
+<h3><span class="header-section-number">3.2.1</span> Course 1 - Intro to R</h3>
+<p>By the end of the one day short course, the attendee should be able to:</p>
+<ul>
+<li>Install and navigate R Studio.</li>
+<li>Set the working directory.</li>
+<li>Understand the types of objects and basic operations in R.</li>
+<li>Read in data from csv and excel files.</li>
+<li>Summarise data.</li>
+<li>Know where to find further information.</li>
+</ul>
+</div>
+<div id="course-2---intermediate-r" class="section level3">
+<h3><span class="header-section-number">3.2.2</span> Course 2 - Intermediate R</h3>
+<p>By the end of the half day short course, the attendee should be able to:</p>
+<ul>
+<li>Find &amp; download appropriate packages for different tasks.</li>
+<li>Use tidyverse functions to manipulate data.</li>
+<li>Use the dplyr package to mutate, select, filter, summarise and arrange data.</li>
+<li>Analyse datasets by groups.</li>
+<li>Use tidyr to restructure data.</li>
+<li>Know where to find further information.</li>
+</ul>
+</div>
+<div id="course-3---beautiful-visualisations" class="section level3">
+<h3><span class="header-section-number">3.2.3</span> Course 3 - Beautiful Visualisations</h3>
+<p>By the end of the half day short course, the attendee should be able to:</p>
+<ul>
+<li>Know the benefits of ggplot over base R.</li>
+<li>Structure data efficiently to enable the use of ggplot.</li>
+<li>Understand the basic types of plots and when to use them.</li>
+<li>Create beautiful visualisations using ggplot2.</li>
+<li>Use geographical data to produce choropleth maps.</li>
+</ul>
+</div>
+<div id="course-4---r-for-health-economics" class="section level3">
+<h3><span class="header-section-number">3.2.4</span> Course 4 - R for Health Economics</h3>
+<p>By the end of the one day short course, the attendee should also be able to:</p>
+<ul>
+<li>Understand the strengths and limitations of R for health economic modelling.</li>
+<li>Manage different objects and parameters in R.</li>
+<li>Use loops, custom functions and the apply family.</li>
+<li>Create a markov model from scratch given known parameters.</li>
+<li>Create a microsimulation model to incorporate hetrogeneity between groups.</li>
+<li>Understand the importance of tranparency of coding. In particular commenting.</li>
+</ul>
+</div>
+<div id="course-5---r-shiny-for-decision-modelling" class="section level3">
+<h3><span class="header-section-number">3.2.5</span> Course 5 - R Shiny for decision modelling</h3>
+<p>By the end of the half day short course, the attendee should be able to:</p>
+<ul>
+<li>Understand the benefits and limitations of R-Shiny.</li>
+<li>Have a basic understanding of the principles behind R-Shiny.</li>
+<li>Create an R-Shiny application from scratch.</li>
+<li>Integrate beautiful plots into R-Shiny.</li>
+<li>Develop a user interface for an existing markov model in R-Shiny.</li>
+<li>Know where to find further information.</li>
+</ul>
+</div>
+<div id="course-6---collaboration-in-r" class="section level3">
+<h3><span class="header-section-number">3.2.6</span> Course 6 - Collaboration in R</h3>
+<p>By the end of the half day short course, the attendee should be able to:</p>
+<ul>
+<li>Understand the strengths and limitations of R-Markdown.</li>
+<li>Create replicatable HTML, Word and PDF documents using R-Markdown.</li>
+<li>Include chunks of code, graphs, references and biblographies, links to websites and pictures within documents.</li>
+<li>Replicate analysis for new or updated datasets, or create templates for routine data analysis.</li>
+</ul>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="course-1-introduction-to-r.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/01-intro.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

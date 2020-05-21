@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Data Science for Public Health Economic Evaluation</title>
+  <title>Chapter 6 Microsimulation Model | Data Science for Public Health Economic Evaluation</title>
   <meta name="description" content="This is a teaching tool in progress" />
   <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Data Science for Public Health Economic Evaluation" />
+  <meta property="og:title" content="Chapter 6 Microsimulation Model | Data Science for Public Health Economic Evaluation" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Data Science for Public Health Economic Evaluation" />
+  <meta name="twitter:title" content="Chapter 6 Microsimulation Model | Data Science for Public Health Economic Evaluation" />
   
   <meta name="twitter:description" content="This is a teaching tool in progress" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="intro.html"/>
+<link rel="prev" href="markov-models.html"/>
+<link rel="next" href="user-interfaces-for-health-economic-evaluation.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -208,107 +208,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Data Science for Public Health Economic Evaluation</h1>
-<p class="author"><em>Robert Smith</em></p>
-<p class="date"><em>2020-05-21</em></p>
-</div>
-<div id="background" class="section level1">
-<h1><span class="header-section-number">Chapter 1</span> Background</h1>
-<div id="who-are-we" class="section level2">
-<h2><span class="header-section-number">1.1</span> Who are we:</h2>
-<p>All of the tutors on the course are PhD candidates in the Wellcome Trust Doctoral Training Centre for Public Health Economics and Decision Science at the School of Health and Related Research at the University of Sheffield.</p>
-<p><em><a href="https://www.linkedin.com/in/robert-smith-53b28438/">Robert Smith</a></em> joined ScHARR in 2016. His research focuses on the methods used to estimate the costs and benefits of public health interventions, with a specific interest in microsimulation modelling (done in R). He has become increasingly intersted in the use of R-Markdown and R-Shiny to make research more transparent and to aid decision makers. While doing his PhD, Robert has been involved in projects with the WHO and Parkrun.</p>
-<p><em><a href="https://www.sheffield.ac.uk/scharr/staff-pgrs/studentprofiles/paulschneider">Paul Schneider</a></em> joined ScHARR in 2018. He is working on conceptual and methodological problems in valuing health outcomes in economic evaluations. A medical doctor and epidemiologist by training, he has used R in various research projects, ranging from the modeling costs of breast cancer, and value of information analyses, to the monitoring of influenza in real-time using online data. He is a keen advocate of open science practices.</p>
-</div>
-<div id="our-series-of-short-courses-in-r." class="section level2">
-<h2><span class="header-section-number">1.2</span> Our series of Short Courses in R.</h2>
-<p>Below is a list of our planned short courses in R.</p>
-<div id="course-1---intro-to-r" class="section level3">
-<h3><span class="header-section-number">1.2.1</span> Course 1 - Intro to R</h3>
-<p>By the end of the one day short course, the attendee should be able to:</p>
-<ul>
-<li>Install and navigate R Studio.</li>
-<li>Set the working directory.</li>
-<li>Understand the types of objects and basic operations in R.</li>
-<li>Read in data from csv and excel files.</li>
-<li>Summarise data.</li>
-<li>Know where to find further information.</li>
-</ul>
-</div>
-<div id="course-2---intermediate-r" class="section level3">
-<h3><span class="header-section-number">1.2.2</span> Course 2 - Intermediate R</h3>
-<p>By the end of the half day short course, the attendee should be able to:</p>
-<ul>
-<li>Find &amp; download appropriate packages for different tasks.</li>
-<li>Use tidyverse functions to manipulate data.</li>
-<li>Use the dplyr package to mutate, select, filter, summarise and arrange data.</li>
-<li>Analyse datasets by groups.</li>
-<li>Use tidyr to restructure data.</li>
-<li>Know where to find further information.</li>
-</ul>
-</div>
-<div id="course-3---beautiful-visualisations" class="section level3">
-<h3><span class="header-section-number">1.2.3</span> Course 3 - Beautiful Visualisations</h3>
-<p>By the end of the half day short course, the attendee should be able to:</p>
-<ul>
-<li>Know the benefits of ggplot over base R.</li>
-<li>Structure data efficiently to enable the use of ggplot.</li>
-<li>Understand the basic types of plots and when to use them.</li>
-<li>Create beautiful visualisations using ggplot2.</li>
-<li>Use geographical data to produce choropleth maps.</li>
-</ul>
-</div>
-<div id="course-4---r-for-health-economics" class="section level3">
-<h3><span class="header-section-number">1.2.4</span> Course 4 - R for Health Economics</h3>
-<p>By the end of the one day short course, the attendee should also be able to:</p>
-<ul>
-<li>Understand the strengths and limitations of R for health economic modelling.</li>
-<li>Manage different objects and parameters in R.</li>
-<li>Use loops, custom functions and the apply family.</li>
-<li>Create a markov model from scratch given known parameters.</li>
-<li>Create a microsimulation model to incorporate hetrogeneity between groups.</li>
-<li>Understand the importance of tranparency of coding. In particular commenting.</li>
-</ul>
-</div>
-<div id="course-5---r-shiny-for-decision-modelling" class="section level3">
-<h3><span class="header-section-number">1.2.5</span> Course 5 - R Shiny for decision modelling</h3>
-<p>By the end of the half day short course, the attendee should be able to:</p>
-<ul>
-<li>Understand the benefits and limitations of R-Shiny.</li>
-<li>Have a basic understanding of the principles behind R-Shiny.</li>
-<li>Create an R-Shiny application from scratch.</li>
-<li>Integrate beautiful plots into R-Shiny.</li>
-<li>Develop a user interface for an existing markov model in R-Shiny.</li>
-<li>Know where to find further information.</li>
-</ul>
-</div>
-<div id="course-6---collaboration-in-r" class="section level3">
-<h3><span class="header-section-number">1.2.6</span> Course 6 - Collaboration in R</h3>
-<p>By the end of the half day short course, the attendee should be able to:</p>
-<ul>
-<li>Understand the strengths and limitations of R-Markdown.</li>
-<li>Create replicatable HTML, Word and PDF documents using R-Markdown.</li>
-<li>Include chunks of code, graphs, references and biblographies, links to websites and pictures within documents.</li>
-<li>Collaborate on a project in GitHub</li>
-<li>Replicate analysis for new or updated datasets from previous work made publicly available on GitHub.</li>
-</ul>
-</div>
-</div>
-<div id="aim-of-the-series-of-courses" class="section level2">
-<h2><span class="header-section-number">1.3</span> Aim of the series of courses</h2>
-<p>This series of short courses are designed to equip the participant with a basic set of tools to undertake research using R. The aim is to create a strong foundation on which participants can build skills and knowledge specific to their research and consultancy objectives. The course makes use of the authors’ experiences (many of which were frustrating) of working with R for data-science and statistical analysis. However there are many other resources available, and we would particularly recommend the freely available content at <em><a href="https://r4ds.had.co.nz/">R for Data Science</a></em> as a good place to recap the materials taught in this course. The hard copy of Hadley Wickham and Garrett Grolemund’s book of the same name (and content) is available at <em><a href="https://r4ds.had.co.nz/">Amazon.com</a></em>. Alternatively, a user guide is available on the CRAN R-Project website <a href="https://cran.r-project.org/doc/manuals/r-release/R-intro.html">here</a>, although the author finds this less easy to follow than Hadley Wickham’s book described above. Further details of where to go to answer more specific questions are provided throughout the course.</p>
-<p>Requirements: It is assumed that all participants on the course have their own laptop, and have previously used software such as Excel or SPSS. Some basic understanding of statistics and mathematics is required (e.g. mean, median, minimum, maximum).</p>
+<div id="microsimulation-model" class="section level1">
+<h1><span class="header-section-number">Chapter 6</span> Microsimulation Model</h1>
+<p>Basic example of a microsimulation model in R.</p>
+<ol style="list-style-type: decimal">
+<li>Microsim with one health state (dead/alive)</li>
+<li>Multiple simultaneous health states (e.g. Cancer + COPD)</li>
+</ol>
 
-</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="intro.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="markov-models.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="user-interfaces-for-health-economic-evaluation.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -339,7 +254,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/index.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/05-Microsimulation.Rmd",
 "text": "Edit"
 },
 "history": {

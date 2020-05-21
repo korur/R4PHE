@@ -1,0 +1,6 @@
+# Microsimulation Model
+
+Basic example of a microsimulation model in R.
+
+1) Microsim with one health state (dead/alive)
+2) Multiple simultaneous health states (e.g. Cancer + COPD)

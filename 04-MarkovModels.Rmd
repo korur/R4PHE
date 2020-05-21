@@ -1,0 +1,3 @@
+# Markov Models
+
+Basic markov models, similar to HEDM Course but in 1 day.
