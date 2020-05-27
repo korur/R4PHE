@@ -1,5 +1,11 @@
 # Beautiful Visualizations in R
 
+One of the strengths of R is its ability to create beautiful visualisations, improving the ability of stakeholders to understand research outputs. We can produce plots, 3 dimensional images, animations, maps etc in order to give decision makers the best possible information to make informed decisions.
+
+Base R provides some basic plotting functionality, we saw this in the introduction section. The ggplot2 package [https://ggplot2.tidyverse.org/reference/ggplot.html](https://ggplot2.tidyverse.org/reference/ggplot.html) extends this 
+
+A cheatsheet is provided here ![ggplot cheatsheet](_bookdown_files/bookdown-demo_files/figures-beauviz/ggplot_cheatsheet.pdf)
+
 Basic guide to ggplot for health data:
 1) Line charts (Covid)
 2) Scatter plots
