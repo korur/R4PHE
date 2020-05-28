@@ -2,9 +2,9 @@
 
 Include intermediate content here.
 
-1. wrangling (dplyr & data.table).
-2. basic linear model & predictions
-3. functions
-4. loops vs apply family
-5. benchmarking (microbenchmark)
-6. tictoc
+- wrangling (dplyr & data.table).
+- basic linear model & predictions
+- functions
+- loops vs apply family
+- benchmarking (microbenchmark)
+- tictoc
