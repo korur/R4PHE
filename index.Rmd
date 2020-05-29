@@ -14,6 +14,10 @@ description: "This is a teaching tool in progress"
 
 # Background
 
+This book brings together a number of courses created by researchers at the School of Health and Related Research at the University of Sheffield who work in the intersection of health, data science, decision science and economics. It was created with the aim of aiding collaboration, reproducability of research and promoting open science. The hope is that by working through this book and applying the methods in collaborative research endevours projects will be more efficient, research outputs will be more useful, and future collaboration easier.
+
+The views expressed in the book at that of the author, not of the School of Health and Related Research or the University of Sheffield.
+
 ## Who are we:
 
 All of the tutors on the course are PhD candidates in the Wellcome Trust Doctoral Training Centre for Public Health Economics and Decision Science at the School of Health and Related Research at the University of Sheffield.
@@ -90,7 +94,9 @@ By the end of the half day short course, the attendee should be able to:
 
 ## Aim of the series of courses
 
-This series of short courses are designed to equip the participant with a basic set of tools to undertake research using R. The aim is to create a strong foundation on which participants can build skills and knowledge specific to their research and consultancy objectives. The course makes use of the authors' experiences (many of which were frustrating) of working with R for data-science and statistical analysis. However there are many other resources available, and we would particularly recommend the freely available content at *[R for Data Science](https://r4ds.had.co.nz/)* as a good place to recap the materials taught in this course. The hard copy of Hadley Wickham and Garrett Grolemund's book of the same name (and content) is available at *[Amazon.com](https://r4ds.had.co.nz/)*. Alternatively, a user guide is available on the CRAN R-Project website [here](https://cran.r-project.org/doc/manuals/r-release/R-intro.html), although the author finds this less easy to follow than Hadley Wickham's book described above. Further details of where to go to answer more specific questions are provided throughout the course.
+This book, originally a series of short courses, is designed to equip the participant with a basic set of tools to undertake research using R. The aim is to create a strong foundation on which participants can build skills and knowledge specific to their research and consultancy objectives. At the time of writing R is the dominant programming language in health research, but other languages such as Python are more popular in business and finance environments. There is much debate about the relative benefits of different languages, however from our  experience the most important thing is not the particular language used but the approach to solving problems. (If you intend to work in health research we still advise learning R).
+
+We assume no prior experience in programming prior to reading this text. Our introductory course, which makes up the Intro to R chapter covers the basics - those familiar with R or who have read Wickham & Grolemund's popular *[R for Data Science](https://r4ds.had.co.nz/)* can skip this chapter. We then move on to more advanced topics in the Intermediate R and Beautiful Vizualisations chapters. The next two chapters focus on specific methods in health economic evaluation - the use of markov models microsimulation. We then turn to the use of user interfaces (R-Shiny) to improve the transparency of these models, before providing a tutorial in the use of Git and GitHub to aid collaboration and make research more transparent.
 
 Requirements: It is assumed that all participants on the course have their own laptop, and have previously used software such as Excel or SPSS. Some basic understanding of statistics and mathematics is required (e.g. mean, median, minimum, maximum).
 
