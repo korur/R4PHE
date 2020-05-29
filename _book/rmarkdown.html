@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 8 Collaboration in GitHub | Data Science for Public Health Economic Evaluation</title>
+  <title>Chapter 9 RMarkdown | Data Science for Public Health Economic Evaluation</title>
   <meta name="description" content="This is a teaching tool in progress" />
   <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 8 Collaboration in GitHub | Data Science for Public Health Economic Evaluation" />
+  <meta property="og:title" content="Chapter 9 RMarkdown | Data Science for Public Health Economic Evaluation" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 8 Collaboration in GitHub | Data Science for Public Health Economic Evaluation" />
+  <meta name="twitter:title" content="Chapter 9 RMarkdown | Data Science for Public Health Economic Evaluation" />
   
   <meta name="twitter:description" content="This is a teaching tool in progress" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="user-interfaces-for-health-economic-evaluation.html"/>
-<link rel="next" href="further-resources.html"/>
+<link rel="prev" href="collaboration-in-github.html"/>
+<link rel="next" href="references.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -213,15 +213,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.5.7" data-path="collaboration-in-github.html"><a href="collaboration-in-github.html#making-a-pull-request"><i class="fa fa-check"></i><b>8.5.7</b> Making a Pull Request</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="further-resources.html"><a href="further-resources.html"><i class="fa fa-check"></i><b>9</b> Further Resources</a><ul>
-<li class="chapter" data-level="9.1" data-path="further-resources.html"><a href="further-resources.html#cost-effectiveness-analysis"><i class="fa fa-check"></i><b>9.1</b> Cost-effectiveness analysis</a></li>
-<li class="chapter" data-level="9.2" data-path="further-resources.html"><a href="further-resources.html#decision-trees"><i class="fa fa-check"></i><b>9.2</b> Decision trees</a></li>
-<li class="chapter" data-level="9.3" data-path="further-resources.html"><a href="further-resources.html#multistatemicrosimulation-models"><i class="fa fa-check"></i><b>9.3</b> Multistate/microsimulation models</a></li>
-<li class="chapter" data-level="9.4" data-path="further-resources.html"><a href="further-resources.html#optimal-decision-processes"><i class="fa fa-check"></i><b>9.4</b> Optimal decision processes</a></li>
-<li class="chapter" data-level="9.5" data-path="further-resources.html"><a href="further-resources.html#visualisation"><i class="fa fa-check"></i><b>9.5</b> Visualisation</a></li>
-<li class="chapter" data-level="9.6" data-path="further-resources.html"><a href="further-resources.html#data"><i class="fa fa-check"></i><b>9.6</b> Data</a></li>
-<li class="chapter" data-level="9.7" data-path="further-resources.html"><a href="further-resources.html#miscellaneous"><i class="fa fa-check"></i><b>9.7</b> Miscellaneous</a></li>
-</ul></li>
+<li class="chapter" data-level="9" data-path="rmarkdown.html"><a href="rmarkdown.html"><i class="fa fa-check"></i><b>9</b> RMarkdown</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -243,226 +235,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="collaboration-in-github" class="section level1">
-<h1><span class="header-section-number">Chapter 8</span> Collaboration in GitHub</h1>
-<p>This material is based on a workshop by Matthew Hall from the University of Sheffield.</p>
-<p>The aim of this chapter is to give an overview of one very popular method of collaborative working, version control and producing reproducable research. The authors use this method for all work they do (even when working on individual projects). We feel it is essential for the future of the field (and science in general).</p>
-<p>We assume throughout that you have read previous chapters and have R &amp; RStudio installed. The tutorial will use the RStudio Git GUI (basically an extra tab to use Git from within RStudio). If you don’t already have RStudio on your computer, see Chapter 2.1 or install directly from here <a href="https://www.rstudio.com">https://www.rstudio.com</a>.</p>
-<div id="git" class="section level3">
-<h3><span class="header-section-number">8.0.1</span> Git</h3>
-<p>Git comes as a separate package for the main platforms. You might already have Git installed. If you don’t, you can get packages for Windows and Mac from <a href="http://git-scm.com/downloads">http://git-scm.com/downloads</a></p>
-</div>
-<div id="setting-up-rstudio" class="section level3">
-<h3><span class="header-section-number">8.0.2</span> Setting up RStudio</h3>
-<p>Before creating a project, RStudio needs to be configured to use Git. Open the Settings page in RStudio and make sure <em>Enable version control interface for RStudio projects</em> is checked. Ensure the <em>Git executable</em> field is populated. If it isn’t, it needs to be set to the directory containing git. For Windows, this will be in <code>C:\Program Files (x86)\Git\bin\git.exe</code> if you used the package from git-scm.com. On Linux or Macs it should be in <code>/usr/local/bin</code> or <code>/usr/bin</code>.</p>
-<div class="figure">
-<img src="_bookdown_files/bookdown-demo_files/figure-html/1_git_settings.png" alt="" />
-<p class="caption">The git settings dialog in RStudio</p>
-</div>
-</div>
-<div id="creating-a-project-with-git-integration" class="section level2">
-<h2><span class="header-section-number">8.1</span> Creating a Project with Git Integration</h2>
-<p>To start the tutorial, we’ll go over the basics of checking in changes. To get started, we’ll create an RStudio project. Create a project in RStudio in a new directory. Choose an empty project in the Project Type and make sure the <em>Create a git repository</em> option is checked.</p>
-<p><img src="_bookdown_files/bookdown-demo_files/figure-html/2_create_project.png" alt="2 Create Project" />
-<img src="_bookdown_files/bookdown-demo_files/figure-html/3_project_type.png" alt="3 Project Type" />
-<img src="_bookdown_files/bookdown-demo_files/figure-html/4_project_details.png" alt="4 Project Details" /></p>
-</div>
-<div id="adding-a-new-file-to-the-project" class="section level2">
-<h2><span class="header-section-number">8.2</span> Adding a New File to the Project</h2>
-<p>Create a new R Script from the <em>New File</em> menu and give it a name. Add some code to the file and save it.</p>
-<p><img src="_bookdown_files/bookdown-demo_files/figure-html/5_new_file.png" alt="5 New File" />
-<img src="_bookdown_files/bookdown-demo_files/figure-html/6_new_file_name.png" alt="6 New File Name" /></p>
-</div>
-<div id="overview-of-the-git-panel" class="section level2">
-<h2><span class="header-section-number">8.3</span> Overview of the Git Panel</h2>
-<p>RStudio’s Git integration consists of two components. The Git panel gives the overview of the files in your project. Clicking the <em>History</em> button (or the Diff or Commit buttons) brings up the detailed source control view.</p>
-<div id="empty-repositories" class="section level3">
-<h3><span class="header-section-number">8.3.1</span> Empty Repositories</h3>
-<p>Git tracks the state of files by recording the changes. When you’ve made modifications to files, you can store those changes alongside a message. Git only tracks files that have been “added” to its own list of files it should track. When first started, Git won’t track anything, so you’ll have to add the files to git to track their changes.</p>
-<p>This makes it easy to keep your repository cleaner: you only need to track the relevant files so temporary files or outputs won’t “pollute” your commits.</p>
-<div class="figure">
-<img src="_bookdown_files/bookdown-demo_files/figure-html/7_git_overview.png" alt="" />
-<p class="caption">7 Git Overview</p>
-</div>
-</div>
-<div id="adding-files-to-git" class="section level3">
-<h3><span class="header-section-number">8.3.2</span> Adding Files to Git</h3>
-<p>To set Git to record changes to files, add the file you created to it by checking the box next to its name in the Git panel. This “stages” the change (adding the file). A staged change isn’t saved, but will be included when you commit. The file’s status will change to an “A” to indicate that the file’s addition will be included in your next commit.</p>
-<div class="figure">
-<img src="_bookdown_files/bookdown-demo_files/figure-html/8_git_added.png" alt="" />
-<p class="caption">8 Git Added</p>
-</div>
-</div>
-<div id="committing-the-change" class="section level3">
-<h3><span class="header-section-number">8.3.3</span> Committing the Change</h3>
-<p>Click the commit button to show the commit editor. You can check the changes you’re about to commit before giving your commit a message and clicking a commit button.</p>
-<div class="figure">
-<img src="_bookdown_files/bookdown-demo_files/figure-html/9_commit_window.png" alt="" />
-<p class="caption">9 Commit Window</p>
-</div>
-<p>After committing your file, close the Git output window and the “Review changes” window to get back to the main RStudio interface.</p>
-<div class="figure">
-<img src="_bookdown_files/bookdown-demo_files/figure-html/10_after_commit.png" alt="" />
-<p class="caption">10 After Commit</p>
-</div>
-<p>You’ll see that your file isn’t listed in the Git panel. This is because the file is now “clean”; it hasn’t been changed since it was committed so there are no changes to stage.</p>
-<p>Change the file and save it, and the Git panel will show that the file has been changed again.</p>
-<div class="figure">
-<img src="_bookdown_files/bookdown-demo_files/figure-html/11_more_changes.png" alt="" />
-<p class="caption">11 More Changes</p>
-</div>
-<p>The file now shows up in the Git panel because it’s been modified (M). You can stage these modifications by clicking the Staged checkbox.</p>
-<div class="figure">
-<img src="_bookdown_files/bookdown-demo_files/figure-html/12_stage_more_changes.png" alt="" />
-<p class="caption">12 Stage More Changes</p>
-</div>
-<p>You can then commit the changes via the commit button again.</p>
-<div class="figure">
-<img src="_bookdown_files/bookdown-demo_files/figure-html/13_commit.png" alt="" />
-<p class="caption">13 Commit</p>
-</div>
-</div>
-<div id="looking-at-previous-revisions" class="section level3">
-<h3><span class="header-section-number">8.3.4</span> Looking at Previous Revisions</h3>
-<p>The History button opens the Review Changes window that shows the history of commits made to the repository.</p>
-<div class="figure">
-<img src="_bookdown_files/bookdown-demo_files/figure-html/14_review_changes.png" alt="" />
-<p class="caption">14 Review Changes</p>
-</div>
-<p>Selecting a commit will show the “diff” recorded by Git. You can also use the “View file @ (revision)” button to see how the file looked when it was committed. In RStudio, you can save this file elsewhere to retrieve old copies. <em>(Git provides more advanced features for dealing with (and changing) history but these aren’t (currently) available from within RStudio.)</em></p>
-<div id="diffs" class="section level4">
-<h4><span class="header-section-number">8.3.4.1</span> Diffs</h4>
-<p>When you make a commit, Git stores them as a bundle of diffs against the previous file. That way, Git always has a full set of all the changes made to the file since its addition to the repository. Diffs consist of several chunks; each chunk is a part of the file that changed.</p>
-<p>A chunk itself is made up of added and deleted lines. Sometimes, these are easy to read. Other times, they get confusing to read. For example, if you swap two large blocks of code they may be recorded as two separate chunks. You can keep your diffs readable by making your commits as self-contained as possible.</p>
-</div>
-</div>
-<div id="git-for-single-users" class="section level3">
-<h3><span class="header-section-number">8.3.5</span> Git for Single Users</h3>
-<p>We’ve covered the basics of working with Git for single users: you now have enough experience to use it in your own projects without having to email/duplicate old copies to keep working revisions. Instead, just note the revision (the “SHA” from the Review Changes history tab) used to generate results and you’ll always be able to go back and regenerate them.</p>
-<p>Git repositories can exist on shared services like Dropbox. However, if you do keep a repository in such a service, make sure you only modify it from one machine at a time, and that the repository is fully synchronised before you make any changes.</p>
-</div>
-</div>
-<div id="collaborating-with-git" class="section level2">
-<h2><span class="header-section-number">8.4</span> Collaborating with Git</h2>
-<p>If you work with multiple collaborators (or use multiple computers), you can use Git to make sure everyone has a current copy of changes and to resolve problems when multiple people change the same files.</p>
-<p>It’s possible to copy a repository from one location to another, and all the changes will be kept. Because the history of the repository is included when the copy is taken, Git is able to work out how files should look if people make different changes to their own copies then try to merge them back into a central copy.</p>
-<div id="cloning-a-repository" class="section level3">
-<h3><span class="header-section-number">8.4.1</span> Cloning a Repository</h3>
-<p>To start working with an existing repository, you can clone it. This takes a complete copy of the remote repository, allowing you to go back in its history as you can with other repositories. The clone operation also remembers where the repository came from. If the remote repository changes, you can then pull changes back into your own copy.</p>
-</div>
-<div id="pushing-to-a-repository" class="section level3">
-<h3><span class="header-section-number">8.4.2</span> Pushing to a Repository</h3>
-<p>If you have permission, you can push any changes made to your local repository back to the remote. The tutorial will cover the basic process of making changes and publishing them.</p>
-</div>
-<div id="github-and-bitbucket" class="section level3">
-<h3><span class="header-section-number">8.4.3</span> GitHub and BitBucket</h3>
-<p>GitHub provides a free service that allows you to host a repository and share it with the public (private access is available for a fee). BitBucket provides a similar service. These services serve your central copy, which other collaborators can clone, make changes to, then push commits to.</p>
-</div>
-</div>
-<div id="cloning-a-github-project" class="section level2">
-<h2><span class="header-section-number">8.5</span> Cloning a GitHub Project</h2>
-<p>For this exercise, we’ve set up a GitHub repository at <a href="https://github.com/SheffieldR/git-workshop">https://github.com/SheffieldR/git-workshop</a>. In this exercise, you’ll use GitHub to “fork” the repository, add your name to the README.md file and submit a pull request. This is the normal flow for collaboration with</p>
-<div id="getting-a-github-account" class="section level3">
-<h3><span class="header-section-number">8.5.1</span> Getting a GitHub Account</h3>
-<p>To use GitHub, you’ll need an account. You can sign up for one at <a href="https://github.com/join">https://github.com/join</a>. Once you have an account you can create repositories.</p>
-</div>
-<div id="forking-the-repository" class="section level3">
-<h3><span class="header-section-number">8.5.2</span> Forking the Repository</h3>
-<p>When you want to contribute to a repository, you won’t normally be allowed to send changes straight to it. Instead, you have to take a copy of the repository and make changes on the copy. Then, you ask the maintainer of the original repository to adopt your changes. This process is called “forking” because you’re creating a fork in the project’s timeline. The maintainer will then “merge” the two timelines back into one.</p>
-<div class="figure">
-<img src="_bookdown_files/bookdown-demo_files/figure-html/15_fork_button.png" alt="" />
-<p class="caption">15 Fork Button</p>
-</div>
-<p>To fork our repository, visit <a href="https://github.com/SheffieldR/git-workshop">https://github.com/SheffieldR/git-workshop</a> and click the “Fork” button. This will create a copy of the repository in your account. The repository will be recorded as a fork, linking to the original repository.</p>
-<div class="figure">
-<img src="_bookdown_files/bookdown-demo_files/figure-html/16_fork.png" alt="" />
-<p class="caption">16 Fork</p>
-</div>
-</div>
-<div id="cloning-the-repository-with-rstudio" class="section level3">
-<h3><span class="header-section-number">8.5.3</span> Cloning the Repository with RStudio</h3>
-<p>To get started, create a new project in RStudio. This time, choose the “Version Control” option, then select the Git option.</p>
-<div class="figure">
-<img src="_bookdown_files/bookdown-demo_files/figure-html/17_new_project.png" alt="" />
-<p class="caption">17 New Project</p>
-</div>
-<div class="figure">
-<img src="_bookdown_files/bookdown-demo_files/figure-html/18_source_control.png" alt="" />
-<p class="caption">18 Source Control</p>
-</div>
-<p>On your GitHub project fork, copy the “Clone URL” and paste it into the Git repository URL in the RStudio Git window.</p>
-<div class="figure">
-<img src="_bookdown_files/bookdown-demo_files/figure-html/19_git_clone_url.png" alt="" />
-<p class="caption">19 Git Clone Url</p>
-</div>
-<div class="figure">
-<img src="_bookdown_files/bookdown-demo_files/figure-html/20_git_repo.png" alt="" />
-<p class="caption">20 Git Repo</p>
-</div>
-<p>Click the Create Project button to check out the remote copy.</p>
-</div>
-<div id="making-changes" class="section level3">
-<h3><span class="header-section-number">8.5.4</span> Making changes</h3>
-<p>Once RStudio has checked the project out, it will automatically generate a project file and <code>.gitignore</code> file. These files can be ignored for the exercise. Open the <code>README.md</code> file from the Files panel.</p>
-<div class="figure">
-<img src="_bookdown_files/bookdown-demo_files/figure-html/21_files.png" alt="" />
-<p class="caption">21 Files</p>
-</div>
-<p>Make some changes to the README.md file and commit them using the Git panel, going through the same steps as before.</p>
-</div>
-<div id="add-a-new-r-file-optional" class="section level3">
-<h3><span class="header-section-number">8.5.5</span> Add a New R File (Optional)</h3>
-<p>If you wish, you can also add a new file and write some R code. Don’t forget to add it to Git and save the changes.</p>
-</div>
-<div id="pushing-your-changes" class="section level3">
-<h3><span class="header-section-number">8.5.6</span> Pushing Your Changes</h3>
-<p>You’re now ready to push your changes to your forked copy of the repository. First, open the History window from the Git panel.</p>
-<div class="figure">
-<img src="_bookdown_files/bookdown-demo_files/figure-html/23_push.png" alt="" />
-<p class="caption">23 Push</p>
-</div>
-<p>The overview shows that your copy of the repository is ahead of the “origin” - you’ve made changes that aren’t saved remotely yet. Close the Review Changes window and then click the Push button in the Git panel.</p>
-<p>After some time, your changes are now available remotely on your fork. You can verify your push worked by checking the History in RStudio.</p>
-<div class="figure">
-<img src="_bookdown_files/bookdown-demo_files/figure-html/24_history.png" alt="" />
-<p class="caption">24 History</p>
-</div>
-<p>The “origin” and local histories are the same; the remote branch has “caught up” to your changes.</p>
-</div>
-<div id="making-a-pull-request" class="section level3">
-<h3><span class="header-section-number">8.5.7</span> Making a Pull Request</h3>
-<p>Go to your repository on GitHub. You should see your changes to the <code>README.md</code> file in the project overview.</p>
-<div class="figure">
-<img src="_bookdown_files/bookdown-demo_files/figure-html/25_github_project.png" alt="" />
-<p class="caption">25 Github Project</p>
-</div>
-<p>Click the “Pull Requests” link on the right hand side of the project.</p>
-<div class="figure">
-<img src="_bookdown_files/bookdown-demo_files/figure-html/26_pull_requests.png" alt="" />
-<p class="caption">26 Pull Requests</p>
-</div>
-<p>Click the “New Pull Request” button to create a pull request for your changes.</p>
-<div class="figure">
-<img src="_bookdown_files/bookdown-demo_files/figure-html/27_create_pull_request.png" alt="" />
-<p class="caption">27 Create Pull Request</p>
-</div>
-<p>You’ll see all the differences that you’re proposing the maintainer integrates with the repository. Make sure you haven’t accidentally included any superfluous files. If you’re happy with the changes, click the “Make Pull Request” button.</p>
-<div class="figure">
-<img src="_bookdown_files/bookdown-demo_files/figure-html/28_add_description.png" alt="" />
-<p class="caption">28 Add Description</p>
-</div>
-<p>You can now add a title and description that motivates your suggested changes.</p>
+<div id="rmarkdown" class="section level1">
+<h1><span class="header-section-number">Chapter 9</span> RMarkdown</h1>
+<p>Useful stuff to know</p>
 
-</div>
-</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="user-interfaces-for-health-economic-evaluation.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="further-resources.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="collaboration-in-github.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -493,7 +277,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/07-GitHub.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/08_RMarkdown.Rmd",
 "text": "Edit"
 },
 "history": {
