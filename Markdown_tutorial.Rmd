@@ -1,4 +1,0 @@
-#R-Markdown tutorial
-
-Created in Markdown
-
