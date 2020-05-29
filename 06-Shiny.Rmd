@@ -7,7 +7,13 @@ Robert Smith^1^ & Paul Schneider^1^
 
 *Corresponding Author: Robert Smith - rasmith3@sheffield.ac.uk*
 \endgroup
- 
+
+This chapter follows a publication currently under open peer review at [Wellcome Open Research](https://wellcomeopenresearch.org/articles/5-69). 
+
+To cite this publication use the following citation:
+Smith R and Schneider P. Making health economic models Shiny: A tutorial. Wellcome Open Res 2020, 5:69.
+
+More detail is available on the following open access repository: [https://github.com/RobertASmith/paper_makeHEshiny](https://github.com/RobertASmith/paper_makeHEshiny)
 
 ## Abstract
 
