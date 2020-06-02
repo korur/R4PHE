@@ -1,4 +1,4 @@
-# Collaboration in GitHub 
+# Collaboration & Repoducability 
 
 This material is based on a workshop by Matthew Hall from the University of Sheffield.
 
@@ -6,7 +6,7 @@ The aim of this chapter is to give an overview of one very popular method of col
 
 We assume throughout that you have read previous chapters and have R & RStudio installed. The tutorial will use the RStudio Git GUI (basically an extra tab to use Git from within RStudio). If you don't already have RStudio on your computer, see Chapter 2.1 or install directly from here [https://www.rstudio.com](https://www.rstudio.com).
 
-### Git
+## Git & GitHub
 
 Git comes as a separate package for the main platforms. You might already have Git installed. If you don't, you can get packages for Windows and Mac from [http://git-scm.com/downloads](http://git-scm.com/downloads)
 
@@ -191,3 +191,31 @@ You'll see all the differences that you're proposing the maintainer integrates w
 ![28 Add Description](_bookdown_files/bookdown-demo_files/figure-html/28_add_description.png)
 
 You can now add a title and description that motivates your suggested changes.
+
+## RMarkdown
+
+An RMarkdown report (.Rmd) is an dynamic document containing both R and markdown code. They are useful for research because they can incorporate code and text, which can be updated with a single click. This means that if the analysis or data changes reports don't need to be rewritten and tables and figures will automatically update. For example in Health Economic Evaluation changes to model assumptions can be made by a decision maker, and an updated report created and emailed to the user, all from within a web-based user-interface.
+
+A brief tutorial is available here: [https://rmarkdown.rstudio.com/articles_intro.html](https://rmarkdown.rstudio.com/articles_intro.html).
+
+A more detailed book was published in April 2020 by Yihui Xie, J. J. Allaire & Garrett Grolemund and is available for free online here: [https://bookdown.org/yihui/rmarkdown/](https://bookdown.org/yihui/rmarkdown/)
+
+A paper copy is available here: [https://www.amazon.co.uk/Markdown-Definitive-Guide-Chapman-Hall/dp/1138359335/ref=sr_1_1?dchild=1&keywords=R+Markdown%3A+The+Definitive+Guide&qid=1591087189&sr=8-1](https://www.amazon.co.uk/Markdown-Definitive-Guide-Chapman-Hall/dp/1138359335/ref=sr_1_1?dchild=1&keywords=R+Markdown%3A+The+Definitive+Guide&qid=1591087189&sr=8-1)
+
+
+## Open Access Repositories
+
+When publishing in open access journals, as we did with our article from Chapter 6: "Making health economic models Shiny: A tutorial" which is published in Wellcome Open Research [https://wellcomeopenresearch.org/articles/5-69](https://wellcomeopenresearch.org/articles/5-69) it is often essential to store data and code in a static repository. The code for this article is published in Zenodo here: [https://zenodo.org/record/3730897#.XtYSjzpKiUk](https://zenodo.org/record/3730897#.XtYSjzpKiUk). 
+
+Since we have previously used Zenodo we describe the process of creating a static repository on this platform. A GitHub guide is available here [https://guides.github.com/activities/citable-code/](https://guides.github.com/activities/citable-code/) but we describe the process in more detail.
+
+### Zenodo
+
+Allows researchers to deposit data-sets, code, reports etc.
+
+It provides a DOI to datasets.
+
+It can be used directly from GitHub.
+
+
+
