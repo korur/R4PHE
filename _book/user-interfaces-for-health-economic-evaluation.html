@@ -24,7 +24,7 @@
 <meta name="author" content="Robert Smith" />
 
 
-<meta name="date" content="2020-06-02" />
+<meta name="date" content="2020-06-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -171,15 +171,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="2.5" data-path="intro.html"><a href="intro.html#further-learning"><i class="fa fa-check"></i><b>2.5</b> Further learning</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="intermediate-r.html"><a href="intermediate-r.html"><i class="fa fa-check"></i><b>3</b> Intermediate R</a></li>
-<li class="chapter" data-level="4" data-path="beautiful-visualizations-in-r.html"><a href="beautiful-visualizations-in-r.html"><i class="fa fa-check"></i><b>4</b> Beautiful Visualizations in R</a></li>
+<li class="chapter" data-level="3" data-path="intermediate-r.html"><a href="intermediate-r.html"><i class="fa fa-check"></i><b>3</b> Intermediate R</a><ul>
+<li class="chapter" data-level="3.1" data-path="intermediate-r.html"><a href="intermediate-r.html#functions"><i class="fa fa-check"></i><b>3.1</b> Functions</a></li>
+<li class="chapter" data-level="3.2" data-path="intermediate-r.html"><a href="intermediate-r.html#pipes"><i class="fa fa-check"></i><b>3.2</b> Pipes</a></li>
+<li class="chapter" data-level="3.3" data-path="intermediate-r.html"><a href="intermediate-r.html#iteration"><i class="fa fa-check"></i><b>3.3</b> Iteration</a></li>
+<li class="chapter" data-level="3.4" data-path="intermediate-r.html"><a href="intermediate-r.html#efficient-code"><i class="fa fa-check"></i><b>3.4</b> Efficient code</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="beautiful-visualizations-in-r.html"><a href="beautiful-visualizations-in-r.html"><i class="fa fa-check"></i><b>4</b> Beautiful Visualizations in R</a><ul>
+<li class="chapter" data-level="4.1" data-path="beautiful-visualizations-in-r.html"><a href="beautiful-visualizations-in-r.html#diagrammer"><i class="fa fa-check"></i><b>4.1</b> DiagrammeR</a></li>
+</ul></li>
 <li class="chapter" data-level="5" data-path="markov-models.html"><a href="markov-models.html"><i class="fa fa-check"></i><b>5</b> Markov Models</a></li>
 <li class="chapter" data-level="6" data-path="microsimulation-model.html"><a href="microsimulation-model.html"><i class="fa fa-check"></i><b>6</b> Microsimulation Model</a></li>
 <li class="chapter" data-level="7" data-path="user-interfaces-for-health-economic-evaluation.html"><a href="user-interfaces-for-health-economic-evaluation.html"><i class="fa fa-check"></i><b>7</b> User Interfaces for Health Economic Evaluation</a><ul>
 <li class="chapter" data-level="7.1" data-path="user-interfaces-for-health-economic-evaluation.html"><a href="user-interfaces-for-health-economic-evaluation.html#abstract"><i class="fa fa-check"></i><b>7.1</b> Abstract</a></li>
 <li class="chapter" data-level="7.2" data-path="user-interfaces-for-health-economic-evaluation.html"><a href="user-interfaces-for-health-economic-evaluation.html#introduction"><i class="fa fa-check"></i><b>7.2</b> Introduction</a></li>
 <li class="chapter" data-level="7.3" data-path="user-interfaces-for-health-economic-evaluation.html"><a href="user-interfaces-for-health-economic-evaluation.html#methods"><i class="fa fa-check"></i><b>7.3</b> Methods</a><ul>
-<li class="chapter" data-level="7.3.1" data-path="user-interfaces-for-health-economic-evaluation.html"><a href="user-interfaces-for-health-economic-evaluation.html#functions"><i class="fa fa-check"></i><b>7.3.1</b> Functions</a></li>
+<li class="chapter" data-level="7.3.1" data-path="user-interfaces-for-health-economic-evaluation.html"><a href="user-interfaces-for-health-economic-evaluation.html#functions-1"><i class="fa fa-check"></i><b>7.3.1</b> Functions</a></li>
 <li class="chapter" data-level="7.3.2" data-path="user-interfaces-for-health-economic-evaluation.html"><a href="user-interfaces-for-health-economic-evaluation.html#creating-the-model-wrapper"><i class="fa fa-check"></i><b>7.3.2</b> Creating the model wrapper</a></li>
 <li class="chapter" data-level="7.3.3" data-path="user-interfaces-for-health-economic-evaluation.html"><a href="user-interfaces-for-health-economic-evaluation.html#integrating-into-r-shiny"><i class="fa fa-check"></i><b>7.3.3</b> Integrating into R-Shiny</a></li>
 </ul></li>
@@ -282,7 +289,7 @@ Shiny has already been widely adopted in many different areas and by various org
 <p>While the focus of this tutorial is on the application of Shiny for health economic models, below we provide a brief overview of the “Sick-Sicker model”. For further details, readers are encouraged to consult <span class="citation">Alarid-Escudero et al. (<a href="#ref-alarid2019need" role="doc-biblioref">2019</a>)</span>, <span class="citation">Alarid-Escudero et al. (<a href="#ref-alarid2020cohort" role="doc-biblioref">2020</a>)</span>, <span class="citation">Krijkamp et al. (<a href="#ref-krijkamp2018microsimulation" role="doc-biblioref">2018</a>)</span> and the DARTH group website <span class="citation">(Workgroup <a href="#ref-DARTH" role="doc-biblioref">2020</a>)</span>.</p>
 <p>The Sick-Sicker model is a 4 state (Healthy, Sick, Sicker or Dead) Markov model. The cohort progresses through the model in cycles of equal duration, with the proportion of those in each health state in the next cycle being dependant on the proportion in each health state in the current cycle and a constant transition probability matrix.</p>
 <p>The analysis incorporates probabilistic sensitivity analysis (PSA) by creating a data-frame of PSA inputs (one row being one set of model inputs) based on cost, utility and probability distributions using the function <em>f_gen_psa</em> and then running the model with each set of PSA inputs using the model function <em>f_MM_sicksicker</em>. We therefore begin by describing the two functions <em>f_gen_psa</em> and <em>f_MM_sicksicker</em> in more detail before moving on to demonstrate how to create a user-interface. Note that we add to the coding framework from Alarid-Escudero et al., (2019) to use the <em>f_</em> prefix for functions.</p>
-<div id="functions" class="section level3">
+<div id="functions-1" class="section level3">
 <h3><span class="header-section-number">7.3.1</span> Functions</h3>
 <div id="creating-psa-inputs." class="section level4">
 <h4><span class="header-section-number">7.3.1.1</span> Creating PSA inputs.</h4>
