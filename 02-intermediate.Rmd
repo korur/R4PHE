@@ -5,6 +5,32 @@ Include intermediate content here.
 - wrangling (dplyr & data.table).
 - regression model & predictions
 - functions
-- loops vs apply family
+
+## Functions
+
+A considerable amount of detail can be found here: 
+*[Functions](https://r4ds.had.co.nz/functions.html)*
+
+## Pipes
+
+Again Hadley Wickham's book covers this in considerable detail:
+*[Pipes](https://r4ds.had.co.nz/pipes.html)*
+
+## Iteration
+
+We would advise reading this chapter to better understand iteration:
+*[Loops](https://r4ds.had.co.nz/iteration.html#for-loops)*
+
+ <INSERT DETAIL ON APPLY FAMILY - SINCE PEOPLE STRUGGLE HERE>
+ 
+## Efficient code
+
+Colin Gillespie's book [Efficient R Programming](https://csgillespie.github.io/efficientR/) covers a range of topics outlining how to structure and undertake projects in R in such a way as to minimize mistakes and maximize efficiency. We cover a lot of the material throughout this book, but provide some links to specific sections here:
+
+
+[Profvis](https://csgillespie.github.io/efficientR/performance.html#getting-started-with-profvis) can be used to identify how long it takes to run each line of code. This is very useful when trying to speed up simulations since it is possible to identify code chunks that are inefficient.
+
+[Parallel Computing](https://csgillespie.github.io/efficientR/performance.html#performance-parallel) can make use of multiple cores to dramatically speed up model run-time.
+
 - benchmarking (microbenchmark)
 - tictoc

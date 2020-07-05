@@ -23,8 +23,8 @@
 
 <meta name="author" content="Robert Smith" />
 
-
 <meta name="date" content="2020-07-04" />
+
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -172,15 +172,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="2.5" data-path="intro.html"><a href="intro.html#further-learning"><i class="fa fa-check"></i><b>2.5</b> Further learning</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="intermediate-r.html"><a href="intermediate-r.html"><i class="fa fa-check"></i><b>3</b> Intermediate R</a></li>
-<li class="chapter" data-level="4" data-path="beautiful-visualizations-in-r.html"><a href="beautiful-visualizations-in-r.html"><i class="fa fa-check"></i><b>4</b> Beautiful Visualizations in R</a></li>
+<li class="chapter" data-level="3" data-path="intermediate-r.html"><a href="intermediate-r.html"><i class="fa fa-check"></i><b>3</b> Intermediate R</a><ul>
+<li class="chapter" data-level="3.1" data-path="intermediate-r.html"><a href="intermediate-r.html#functions"><i class="fa fa-check"></i><b>3.1</b> Functions</a></li>
+<li class="chapter" data-level="3.2" data-path="intermediate-r.html"><a href="intermediate-r.html#pipes"><i class="fa fa-check"></i><b>3.2</b> Pipes</a></li>
+<li class="chapter" data-level="3.3" data-path="intermediate-r.html"><a href="intermediate-r.html#iteration"><i class="fa fa-check"></i><b>3.3</b> Iteration</a></li>
+<li class="chapter" data-level="3.4" data-path="intermediate-r.html"><a href="intermediate-r.html#efficient-code"><i class="fa fa-check"></i><b>3.4</b> Efficient code</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="beautiful-visualizations-in-r.html"><a href="beautiful-visualizations-in-r.html"><i class="fa fa-check"></i><b>4</b> Beautiful Visualizations in R</a><ul>
+<li class="chapter" data-level="4.1" data-path="beautiful-visualizations-in-r.html"><a href="beautiful-visualizations-in-r.html#diagrammer"><i class="fa fa-check"></i><b>4.1</b> DiagrammeR</a></li>
+</ul></li>
 <li class="chapter" data-level="5" data-path="markov-models.html"><a href="markov-models.html"><i class="fa fa-check"></i><b>5</b> Markov Models</a></li>
 <li class="chapter" data-level="6" data-path="microsimulation-model.html"><a href="microsimulation-model.html"><i class="fa fa-check"></i><b>6</b> Microsimulation Model</a></li>
 <li class="chapter" data-level="7" data-path="user-interfaces-for-health-economic-evaluation.html"><a href="user-interfaces-for-health-economic-evaluation.html"><i class="fa fa-check"></i><b>7</b> User Interfaces for Health Economic Evaluation</a><ul>
 <li class="chapter" data-level="7.1" data-path="user-interfaces-for-health-economic-evaluation.html"><a href="user-interfaces-for-health-economic-evaluation.html#abstract"><i class="fa fa-check"></i><b>7.1</b> Abstract</a></li>
 <li class="chapter" data-level="7.2" data-path="user-interfaces-for-health-economic-evaluation.html"><a href="user-interfaces-for-health-economic-evaluation.html#introduction"><i class="fa fa-check"></i><b>7.2</b> Introduction</a></li>
 <li class="chapter" data-level="7.3" data-path="user-interfaces-for-health-economic-evaluation.html"><a href="user-interfaces-for-health-economic-evaluation.html#methods"><i class="fa fa-check"></i><b>7.3</b> Methods</a><ul>
-<li class="chapter" data-level="7.3.1" data-path="user-interfaces-for-health-economic-evaluation.html"><a href="user-interfaces-for-health-economic-evaluation.html#functions"><i class="fa fa-check"></i><b>7.3.1</b> Functions</a></li>
+<li class="chapter" data-level="7.3.1" data-path="user-interfaces-for-health-economic-evaluation.html"><a href="user-interfaces-for-health-economic-evaluation.html#functions-1"><i class="fa fa-check"></i><b>7.3.1</b> Functions</a></li>
 <li class="chapter" data-level="7.3.2" data-path="user-interfaces-for-health-economic-evaluation.html"><a href="user-interfaces-for-health-economic-evaluation.html#creating-the-model-wrapper"><i class="fa fa-check"></i><b>7.3.2</b> Creating the model wrapper</a></li>
 <li class="chapter" data-level="7.3.3" data-path="user-interfaces-for-health-economic-evaluation.html"><a href="user-interfaces-for-health-economic-evaluation.html#integrating-into-r-shiny"><i class="fa fa-check"></i><b>7.3.3</b> Integrating into R-Shiny</a></li>
 </ul></li>
@@ -276,11 +283,34 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>wrangling (dplyr &amp; data.table).</li>
 <li>regression model &amp; predictions</li>
 <li>functions</li>
-<li>loops vs apply family</li>
+</ul>
+<div id="functions" class="section level2">
+<h2><span class="header-section-number">3.1</span> Functions</h2>
+<p>A considerable amount of detail can be found here:
+<em><a href="https://r4ds.had.co.nz/functions.html">Functions</a></em></p>
+</div>
+<div id="pipes" class="section level2">
+<h2><span class="header-section-number">3.2</span> Pipes</h2>
+<p>Again Hadley Wickham’s book covers this in considerable detail:
+<em><a href="https://r4ds.had.co.nz/pipes.html">Pipes</a></em></p>
+</div>
+<div id="iteration" class="section level2">
+<h2><span class="header-section-number">3.3</span> Iteration</h2>
+<p>We would advise reading this chapter to better understand iteration:
+<em><a href="https://r4ds.had.co.nz/iteration.html#for-loops">Loops</a></em></p>
+<p>&lt;INSERT DETAIL ON APPLY FAMILY - SINCE PEOPLE STRUGGLE HERE&gt;</p>
+</div>
+<div id="efficient-code" class="section level2">
+<h2><span class="header-section-number">3.4</span> Efficient code</h2>
+<p>Colin Gillespie’s book <a href="https://csgillespie.github.io/efficientR/">Efficient R Programming</a> covers a range of topics outlining how to structure and undertake projects in R in such a way as to minimize mistakes and maximize efficiency. We cover a lot of the material throughout this book, but provide some links to specific sections here:</p>
+<p><a href="https://csgillespie.github.io/efficientR/performance.html#getting-started-with-profvis">Profvis</a> can be used to identify how long it takes to run each line of code. This is very useful when trying to speed up simulations since it is possible to identify code chunks that are inefficient.</p>
+<p><a href="https://csgillespie.github.io/efficientR/performance.html#performance-parallel">Parallel Computing</a> can make use of multiple cores to dramatically speed up model run-time.</p>
+<ul>
 <li>benchmarking (microbenchmark)</li>
 <li>tictoc</li>
 </ul>
 
+</div>
 </div>
             </section>
 
